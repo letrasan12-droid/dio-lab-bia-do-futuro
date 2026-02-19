@@ -1,0 +1,30 @@
+import re
+
+def processar_renegociacao(mensagem_usuario):
+    # 1. Extração de valor usando Regex (ex: "devo 5000", "divida de 1.200")
+    padrao_valor = r"(?:R\$?\s?)?(\d+(?:\.\d{3})*(?:,\d{2})?)"
+    match = re.search(padrao_valor, mensagem_usuario)
+    
+    if not match:
+        return "Poderia me informar o valor aproximado da sua dívida para eu calcular um desconto?"
+
+    # Limpeza do valor para float
+    valor_str = match.group(1).replace('.', '').replace(',', '.')
+    valor_divida = float(valor_str)
+    
+    # 2. Regra de Negócio: Tabela de Descontos
+    desconto_avista = 0.40  # 40% de desconto
+    valor_avista = valor_divida * (1 - desconto_avista)
+    
+    # 3. Construção da Resposta Contextualizada
+    resposta = (
+        f"Analisei seu perfil e preparei uma oferta especial! 💡\n\n"
+        f"✅ **Pagamento à Vista:** R$ {valor_avista:,.2f} (40% de desconto!)\n"
+        f"💳 **Parcelado:** 12x de R$ {(valor_divida * 1.05) / 12:,.2f} (com juros reduzidos)\n\n"
+        "Qual dessas opções fica melhor para o seu bolso hoje?"
+    )
+    
+    return resposta
+
+# Teste do comando
+print(processar_renegociacao("Minha dívida é de 5000 reais"))
