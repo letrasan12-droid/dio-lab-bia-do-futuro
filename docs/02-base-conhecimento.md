@@ -4,12 +4,12 @@
 
 Descreva se usou os arquivos da pasta `data`, por exemplo:
 
-| Arquivo | Formato | Utilização no Agente |
+| Arquivo | Formato | Utilização no Agente resolva facil |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
+| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores ser dinâmico no atendimento |
 | `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
+| `produtos_financeiros.json` | JSON | Sugerir soluções adequados ao perfil |
+| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente e uma saúde financeira |
 
 > [!TIP]
 > **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
@@ -34,7 +34,20 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+{
+  "id_transacao": "NEG-2026-X99",
+  "cliente_id": 12345,
+  "acordo": {
+    "tipo": "parcelado",
+    "valor_original": 2000.00,
+    "valor_final": 2100.00,
+    "numero_parcelas": 10,
+    "valor_entrada": 200.00,
+    "data_vencimento_primeira": "2026-03-01"
+  },
+  "canal": "Chatbot_Lia",
+  "status": "aguardando_pagamento_entrada"
+}
 
 ---
 
@@ -46,10 +59,10 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 Dados do Cliente:
 - Nome: João Silva
 - Perfil: Moderado
-- Saldo disponível: R$ 5.000
+- Saldo devedor: R$ 5.000
 
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
+Último pagamento das parcelas:
+- 01/114:  R$ 450
+- 02/114:  R$ 450
 ...
 ```
