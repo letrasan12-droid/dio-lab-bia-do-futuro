@@ -8,22 +8,22 @@
 ### 1. O Problema (30 seg)
 > Qual dor do cliente você resolve?
 
-[Sua descrição aqui]
+solução de contas resolvidas e a vida financeira salva
 
 ### 2. A Solução (1 min)
 > Como seu agente resolve esse problema?
 
-[Sua descrição aqui]
+de forma pratica aumentando o limite de parcelas e diminuindo o valor por parcelas 
 
 ### 3. Demonstração (1 min)
 > Mostre o agente funcionando (pode ser gravação de tela)
 
-[Descreva o que será mostrado]
+"Olá! Entendo perfeitamente como isso gera ansiedade, mas estou aqui para resolvermos isso agora. Analisando seu perfil, consegui uma condição excepcional: você pode quitar essa dívida de R$ 3.500,00 por apenas R$ 1.925,00 hoje, via Pix. É um desconto de 45%! Isso ajudaria você a limpar seu nome hoje?"
 
 ### 4. Diferencial e Impacto (30 seg)
 > Por que essa solução é inovadora e qual é o impacto dela na sociedade?
 
-[Sua descrição aqui]
+O usuário pode simular diferentes cenários (ex: "E se eu pagar em 12x? E em 24x?") sem a pressão de um atendente esperando uma resposta rápida.
 
 ---
 
